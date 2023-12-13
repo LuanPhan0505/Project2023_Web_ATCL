@@ -53,3 +53,44 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+@media (max-width: 480px) {
+  .newsletter {
+    width: 90%; /* Giảm chiều rộng */
+    height: auto; /* Chuyển chiều cao thành auto để nội dung không bị tràn */
+    padding: 20px; /* Giảm padding */
+    margin-bottom: 100px; /* Giảm margin-bottom */
+  }
+
+  .newsletter h1 {
+    font-size: 20px; /* Giảm kích thước font chữ */
+    text-align: center; /* Canh giữa tiêu đề */
+  }
+
+  .newsletter p {
+    font-size: 15px; /* Giảm kích thước font chữ */
+    text-align: center; /* Canh giữa nội dung */
+  }
+
+  .newsletter div {
+    width: 100%; /* Đảm bảo chiều rộng đầy đủ */
+    max-width: 300px; /* Giảm chiều rộng tối đa của phần tử nút */
+    margin: 0 auto; /* Canh giữa theo chiều ngang */
+    height: auto; /* Chuyển chiều cao thành auto để nội dung không bị tràn */
+    padding: 10px; /* Thêm padding để tạo khoảng cách */
+    border-radius: 50px; /* Điều chỉnh border-radius cho phần tử nút */
+    text-align: center; /* Canh giữa nút theo chiều ngang */
+  }
+
+  .newsletter input {
+    width: calc(100% - 40px); /* Đảm bảo input lấp đầy phần tử cha */
+    margin-left: 10px; /* Giảm margin-left */
+  }
+
+  .newsletter div button {
+    width: 100%; /* Đảm bảo chiều rộng đầy đủ */
+    height: auto; /* Chuyển chiều cao thành auto để nội dung không bị tràn */
+    border-radius: 50px; /* Điều chỉnh border-radius cho nút */
+    margin-top: 20px; /* Tạo khoảng cách từ input đến nút */
+  }
+}

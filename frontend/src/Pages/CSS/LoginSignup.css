@@ -54,3 +54,21 @@
 .loginsignup-container span {
   cursor: pointer;
 }
+
+
+
+@media (max-width: 480px) {
+  .loginsignup {
+    padding-top: 20px;
+  }
+
+  .loginsignup-container {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .loginsignup-fields input,
+  .loginsignup-container button {
+    width: 100%;
+  }
+}

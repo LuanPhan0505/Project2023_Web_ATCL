@@ -18,6 +18,11 @@ const CartItems = () => {
         <p>Total</p>
         <p>Remove</p>
       </div>
+
+      <div className="cartitems-format-main-after">
+        <p>LIST ORDER</p>
+      </div>
+
       <hr />
       {products.map((e)=>{
 

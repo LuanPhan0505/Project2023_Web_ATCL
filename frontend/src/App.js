@@ -26,11 +26,11 @@ function App() {
         <Route path='/iPad' element={<ShopCategory banner={ipad_banner} category="ipad"/>}/>
         <Route path='/Mac' element={<ShopCategory banner={mac_banner} category="mac"/>}/>
         <Route path='/Watch' element={<ShopCategory banner={watch_banner} category="watch"/>}/>
-        <Route path='/Promotion' element={<ShopCategory category="Promotion"/>}/>
-        <Route path='/Support' element={<ShopCategory category="Support"/>}/>
+        {/* <Route path='/Support' element={<ShopCategory category="Support"/>}/> */}
         <Route path="/product" element={<Product/>}>
           <Route path=':productId' element={<Product/>}/>
         </Route>
+        <Route path='/Promotion' element={<ShopCategory category="Promotion"/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<LoginSignup/>}/>
         <Route path='/shipping' element={<Shipping/>}/>

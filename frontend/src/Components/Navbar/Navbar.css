@@ -79,15 +79,15 @@
   outline: none; 
   border: 1px solid grey;
   border-radius: 75px; /*chinh cai khung bo tron*/
-  color: #515115;
+  color: #fefcfcfc;
   font-size: 20px;
-  font-weight: 500;
-  background: white;
+  font-weight: 600;
+  background: rgba(172, 172, 172, 0.843);
   cursor: pointer;
 }
 
 .nav-login-cart button:active{ /*chinh hieu ung click*/
-  background: #f9e9e9;
+  background: #716e6e;
 }
 
 .nav-cart-count{
@@ -186,10 +186,11 @@
   }
 
   .nav-menu {
-      align-items: flex-start;
-      gap: 8px;
-      margin-bottom: 20px;
-      margin-left: 0; 
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 0;
   }
 
   .nav-menu.show-options {
@@ -200,19 +201,11 @@
     display: none;
   }
 
-  .nav-menu li{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 3px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: 200;
-      color: #8c8c8c; /* Change to the desired shade of gray */
-      text-align: center;
-      padding: 3px;
-      border-bottom: 1px solid #ccc;
+  .nav-menu li {
+    display: block;
+    text-align: left;
+    padding: 10px; /* Adjust padding for better spacing */
+    border-bottom: 1px solid #ccc;
   }
 
   .nav-menu li:hover {
@@ -222,15 +215,15 @@
   }
 
   .dropdown-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px; /* Thêm padding để tăng kích thước của nút */
-      border-radius: 8px; /* Bo tròn góc */
-      cursor: pointer;
-      background-color: #333; /* Màu nền của nút dropdown */
-      margin-top: 10px;
-      margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #333;
+    margin-top: 10px;
+    margin-bottom: 15px;
   }
 
   .menu-content {
@@ -245,7 +238,7 @@
 
   .menu-text {
       margin-left: 5px; /* Khoảng cách giữa biểu tượng và chữ */
-      font-size: 50px; /* Kích thước chữ */
+      font-size: 20px; /* Kích thước chữ */
       font-weight: bold; /* Độ đậm của chữ */
       color: #faf8f8a9;
   }
@@ -260,10 +253,10 @@
       flex-direction: column; /* Change to column layout for better arrangement */
       align-items: center;
       gap: 10px; /* Add gap between the button and the image */
-    }
+  }
   
     .nav-login-cart button {
-      width: 170px; /* Adjust button width */
+      width: 250px; /* Adjust button width */
       height: 50px; /* Adjust button height */
       font-size: 18px; /* Adjust font size */
     }
@@ -279,10 +272,9 @@
       border-radius: 11px;
       font-size: 14px;
       background: red;
-      color: rgb(249, 242, 242); 
+      color: rgb(196, 193, 193); 
   }
   
-
 }
 
 @media (min-width: 601px) {

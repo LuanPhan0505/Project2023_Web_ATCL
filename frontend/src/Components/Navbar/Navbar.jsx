@@ -55,7 +55,7 @@ const Navbar = () => {
         <div className='navbar'>
             <div className="nav-logo">
                 <img src={logo} alt="" />
-                <Link style={{ textDecoration: 'none' }} to='/'><p onClick={() => { setMenu("shop") }}>Shoppi</p> </Link>
+                <Link style={{ textDecoration: 'none' }} to='/'><p onClick={() => { setMenu("shop") }}>TOPSHIU</p> </Link>
             </div>
 
             <div className="dropdown-button" onClick={toggleOptions}>
@@ -70,7 +70,7 @@ const Navbar = () => {
                 <li onClick={() => { setMenu("Mac") }}><Link style={{ textDecoration: 'none' }} to='/Mac'>Mac</Link>{menu === "Mac" ? <hr /> : <></>}</li>
                 <li onClick={() => { setMenu("Watch") }}><Link style={{ textDecoration: 'none' }} to='/Watch'>Watch</Link>{menu === "Watch" ? <hr /> : <></>}</li>
                 <li onClick={() => { setMenu("Promotion") }}><Link style={{ textDecoration: 'none' }} to='/Promotion'>Promotion</Link>{menu === "Promotion" ? <hr /> : <></>}</li>
-                <li onClick={() => { setMenu("Support") }}><Link style={{ textDecoration: 'none' }} to='/Support'>Support</Link>{menu === "Support" ? <hr /> : <></>}</li>
+                {/* <li onClick={() => { setMenu("Support") }}><Link style={{ textDecoration: 'none' }} to='/Support'>Support</Link>{menu === "Support" ? <hr /> : <></>}</li> */}
             </ul>
             <div className="nav-login-cart">
                 {authToken ? (

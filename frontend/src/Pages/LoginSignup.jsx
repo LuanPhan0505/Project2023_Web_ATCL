@@ -11,6 +11,8 @@ const LoginSignup = () => {
     }
 
   const login = async () => {
+
+
     let dataObj;
     await fetch('http://localhost:4000/auth/login', {
       method: 'POST',
@@ -23,6 +25,8 @@ const LoginSignup = () => {
       .then((resp) => resp.json())
       .then((data) => {dataObj=data});
       console.log(dataObj);
+
+      
       if (dataObj.success) {
         localStorage.setItem('auth-token',dataObj.token);
         localStorage.setItem('username', dataObj.userName);
@@ -35,6 +39,34 @@ const LoginSignup = () => {
   }
 
   const signup = async () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    if (formData.password.length < 8) {
+      alert("Password must be at least 8 characters long.");
+      return;
+    }
+
+    // Password validation: Check if password has at least one uppercase letter
+    if (!/[A-Z]/.test(formData.password)) {
+      alert("Password must contain at least one uppercase letter.");
+      return;
+    }
+
+    // Password validation: Check if password has at least one special character
+    if (!/[@#$%^&+=]/.test(formData.password)) {
+      alert("Password must contain at least one special character.");
+      return;
+    }
+
+    // Password validation: Check if password has at least one digit
+    if (!/\d/.test(formData.password)) {
+      alert("Password must contain at least one digit.");
+      return;
+    }
     let dataObj;
     await fetch('http://localhost:4000/auth/signup', {
       method: 'POST',
@@ -81,3 +113,5 @@ const LoginSignup = () => {
 };
 
 export default LoginSignup;
+
+

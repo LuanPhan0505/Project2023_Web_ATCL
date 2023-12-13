@@ -10,9 +10,33 @@ const Shipping = () => {
 
   const navigate = useNavigate()
 
-  const handleSubmit = () => {
-    navigate(`/checkout?name=${name}&address=${address}&province=${province}&phoneNumber=${PhoneNumber}`)
-  }
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+  
+    // Basic validation: Check if required fields are not empty
+    if (!name || !address || !province || !PhoneNumber) {
+      alert("Please fill in all required fields");
+      return; // Exit the function if validation fails
+    }
+  
+    // Phone number validation: Check if PhoneNumber contains only numeric characters
+    const phoneNumberRegex = /^[0-9]+$/;
+    if (!phoneNumberRegex.test(PhoneNumber)) {
+      alert("Please enter a valid phone number (numeric characters only)");
+      return; // Exit the function if validation fails
+    }
+  
+    // Check if PhoneNumber has exactly 10 digits
+    if (PhoneNumber.length !== 10) {
+      alert("Phone number must be 10 digits");
+      return; // Exit the function if validation fails
+    }
+  
+    // Proceed with navigation if validation passes
+    navigate(`/checkout?name=${name}&address=${address}&province=${province}&phoneNumber=${PhoneNumber}`);
+  };
+  
+  
 
   return (
     <div className="shipping-container">
@@ -48,7 +72,7 @@ const Shipping = () => {
         </label>
 
         <label>
-          Phone Numer:
+          Phone Number:
           <input
             type="text"
             value={PhoneNumber}

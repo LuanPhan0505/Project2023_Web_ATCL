@@ -55,3 +55,44 @@
   height: auto; /* Maintain aspect ratio */
   /* Add any additional styles as needed */
 }
+
+@media (max-width: 480px) {
+  .offers {
+    width: 90%; /* Giảm chiều rộng */
+    height: auto; /* Chuyển chiều cao thành auto để nội dung không bị tràn */
+    padding: 0 20px; /* Giảm padding */
+    margin-bottom: 100px; /* Giảm margin-bottom */
+  }
+
+  .offers-left {
+    padding: 0; /* Xóa padding */
+    text-align: center; /* Canh giữa nội dung */
+  }
+
+  .offers-left h1 {
+    font-size: 20px; /* Giảm kích thước font chữ */
+  }
+
+  .offers-left p {
+    font-size: 20px; /* Giảm kích thước font chữ */
+    font-weight: 500; /* Thay đổi font-weight */
+  }
+
+  .offers-left button {
+    width: 150px; /* Giảm chiều rộng của nút */
+    height: 30px; /* Giảm chiều cao của nút */
+    font-size: 13px; /* Giảm kích thước font chữ */
+    border-radius: 25px; /* Điều chỉnh border-radius cho nút */
+    margin-top: 20px; /* Giảm margin-top */
+  }
+
+  .offers-right {
+    justify-content: center; /* Canh giữa phần tử bên phải */
+    padding-top: 20px; /* Giảm padding top */
+  }
+
+  .offers-right img {
+    max-width: 120%; /* Đảm bảo hình ảnh lấp đầy phần tử cha */
+    max-height: 600px; /* Giảm chiều cao của hình ảnh */
+  }
+}
